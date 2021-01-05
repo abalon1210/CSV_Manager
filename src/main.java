@@ -10,7 +10,7 @@ public class main {
         System.out.println(System.getProperty("user.dir"));
         List<String[]> list = new ArrayList<>();
 
-        String file_path = base + "3) HyperparameterAnalysis_Case5.csv";
+        String file_path = base + "HyperparameterAnalysis_temp.csv";
         try (BufferedReader reader = new BufferedReader(new FileReader(file_path))){
 
             String line = "";
@@ -23,7 +23,7 @@ public class main {
             e.printStackTrace();
         }
 
-        file_path = base + "3) HyperparameterAnalysis_Case5_new.csv";
+        file_path = base + "HyperparameterAnalysis_temp_new.csv";
         try (FileWriter writer = new FileWriter(file_path)){
             for (String[] strings : list) {
                 for (int i = 0; i < strings.length; i++) {
